@@ -1,0 +1,6 @@
+framework module Pods_PeopleofNY {
+  umbrella header "Pods-PeopleofNY-umbrella.h"
+
+  export *
+  module * { export * }
+}
