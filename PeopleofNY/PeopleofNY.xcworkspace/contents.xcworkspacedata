@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/scottguidoboni/ISOrepo/PeopleNY/PeopleofNY/PeopleofNY/ViewControllers/PhotoDetailViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:PeopleofNY/Base.lproj/PhotosViewController.swift">
    </FileRef>
    <FileRef

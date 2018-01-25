@@ -10,29 +10,36 @@ import UIKit
 import AlamofireImage
 
 class PhotosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
+
+    
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("Number of posts: \(posts.count)")
         return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let post = posts[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         if let photos = post["photos"] as? [[String: Any]] {
             // photos is NOT nil, we can use it!
             // TODO: Get the photo url
             
-            // 1.
             let photo = photos[0]
-            // 2.
+        
             let originalSize = photo["original_size"] as! [String: Any]
-            // 3.
+           
             let urlString = originalSize["url"] as! String
-            // 4.
+  
             let url = URL(string: urlString)!
             
             
             cell.picView.af_setImage(withURL: url)
+            
+            tableView.deselectRow(at: indexPath, animated: true)
             
             
             // let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
@@ -75,7 +82,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
                 // Store the returned array of dictionaries in our posts property
                 self.posts = responseDictionary["posts"] as! [[String: Any]]
                 
-                // TODO: Reload the table view
+                // TODO: Reload the table view HarJas
                 self.tableView.reloadData()
                 
             }
@@ -83,8 +90,40 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         task.resume()
     }
         
-
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Get a reference to the PhotoDetailsViewController
+        let vc = segue.destination as! PhotoDetailViewController
+        //Get the cell that triggered the segue
+        let cell = sender as! UITableViewCell
+        //Get the indexPath of the selected photo
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let post = posts[indexPath.row]
+        if let photos = post["photos"] as? [[String: Any]] {
+            // photos is NOT nil, we can use it!
+            // TODO: Get the photo url
+            
+            // 1.
+            let photo = photos[0]
+            // 2.
+            let originalSize = photo["original_size"] as! [String: Any]
+            // 3.
+            let urlString = originalSize["url"] as! String
+            // 4.
+            let url = URL(string: urlString)!
+            print(urlString)
+        
+        
+        
+    
+        //let url = URL(string: urlString)!
+        vc.url = url
+       // vc.photoView.af_setImage(withURL: url)
+            
+            
+        
+    }
+    }
         
     
 
@@ -104,3 +143,4 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     */
 
 }
+

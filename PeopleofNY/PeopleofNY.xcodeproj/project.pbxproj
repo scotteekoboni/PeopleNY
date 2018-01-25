@@ -17,6 +17,7 @@
 		9A878ED7201282B700F32F90 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A878ED6201282B700F32F90 /* PhotosViewController.swift */; };
 		9A878ED920128BFF00F32F90 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A878ED820128BFF00F32F90 /* DetailViewController.swift */; };
 		9A878EDB2012A14800F32F90 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A878EDA2012A14800F32F90 /* PhotoCell.swift */; };
+		9AF113BB20194D630054EA24 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF113BA20194D630054EA24 /* PhotoDetailViewController.swift */; };
 		B41569420C7451DABBB114BF /* Pods_PeopleofNYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2054546744886C51F417D755 /* Pods_PeopleofNYTests.framework */; };
 		E9D1212B7AA9241B6C7166E5 /* Pods_PeopleofNYUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25DB94AF4C869ED43C5E10F /* Pods_PeopleofNYUITests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		9A878ED6201282B700F32F90 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		9A878ED820128BFF00F32F90 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ViewControllers/DetailViewController.swift; sourceTree = "<group>"; };
 		9A878EDA2012A14800F32F90 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		9AF113BA20194D630054EA24 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoDetailViewController.swift; path = /Users/scottguidoboni/ISOrepo/PeopleNY/PeopleofNY/PeopleofNY/ViewControllers/PhotoDetailViewController.swift; sourceTree = "<absolute>"; };
 		9FC3AF0504A4BA1B1A96D5B4 /* Pods-PeopleofNYUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleofNYUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleofNYUITests/Pods-PeopleofNYUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A32029D59AF5B4A1B710E8D6 /* Pods-PeopleofNYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleofNYTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleofNYTests/Pods-PeopleofNYTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E25DB94AF4C869ED43C5E10F /* Pods_PeopleofNYUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleofNYUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 		9A878ED52012829B00F32F90 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9AF113BA20194D630054EA24 /* PhotoDetailViewController.swift */,
 				9A878ED6201282B700F32F90 /* PhotosViewController.swift */,
 				9A878EDA2012A14800F32F90 /* PhotoCell.swift */,
 			);
@@ -477,6 +480,7 @@
 				9A878EDB2012A14800F32F90 /* PhotoCell.swift in Sources */,
 				9A878ED920128BFF00F32F90 /* DetailViewController.swift in Sources */,
 				9A878EA42012725300F32F90 /* AppDelegate.swift in Sources */,
+				9AF113BB20194D630054EA24 /* PhotoDetailViewController.swift in Sources */,
 				9A878ED7201282B700F32F90 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
